@@ -9,13 +9,13 @@ namespace RegexExpression
 {
     public class Validation
     {
-        const string Phone_Num = "^+91[ ][0-9]{10}";
+        const string Password = "[a-zA-z]{8,}";
         public void Test(string input)
         {
-            if (Regex.IsMatch(input, Phone_Num))
-                Console.WriteLine("phone number  matches");
+            if (Regex.IsMatch(input, Password))
+                Console.WriteLine("Password  matches");
             else
-                Console.WriteLine("phone number failed");
+                Console.WriteLine("Password regex failed");
         }
     }
 }

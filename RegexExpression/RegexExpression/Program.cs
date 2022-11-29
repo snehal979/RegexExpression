@@ -8,7 +8,7 @@
             Console.WriteLine("-------------");
             Validation Code = new Validation();
            
-            string input = "91 9887328492";
+            string input = "SnehalEpk";
             Code.Test(input);
 
 
