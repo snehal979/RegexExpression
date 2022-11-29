@@ -9,7 +9,7 @@ namespace RegexExpression
 {
     public class Validation
     {
-        const string Password = "^[a-z]{8,}?[A-Z]{1,}?[0-9]{1,}$";
+        const string Password = "^[a-z]{6,}?[A-Z]{1,}?[0-9]{1,}?(@)$";
         public void Test(string input)
         {
             if (Regex.IsMatch(input, Password))
