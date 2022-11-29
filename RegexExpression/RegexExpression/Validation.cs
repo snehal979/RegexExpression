@@ -9,13 +9,13 @@ namespace RegexExpression
 {
     public class Validation
     {
-        const string First_Name = "^[a-zA-Z]{3,}";
+        const string Last_Name = "^[a-zA-Z]{3,}";
         public void Test(string input)
         {
-            if (Regex.IsMatch(input, First_Name))
-                Console.WriteLine("First name matches");
+            if (Regex.IsMatch(input, Last_Name))
+                Console.WriteLine("Last name matches");
             else
-                Console.WriteLine("First name regex failed");
+                Console.WriteLine("Last name regex failed");
         }
     }
 }
