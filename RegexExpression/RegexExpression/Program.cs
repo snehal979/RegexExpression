@@ -8,7 +8,7 @@
             Console.WriteLine("-------------");
             Validation Code = new Validation();
            
-            string input = "snehalbansD5@";
+            string input = "abc@brigde.bl.co.in";  //abc.xyz@bl.co.in
             Code.Test(input);
 
 

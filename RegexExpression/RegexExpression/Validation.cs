@@ -9,13 +9,13 @@ namespace RegexExpression
 {
     public class Validation
     {
-        const string Password = "^[a-z]{6,}?[A-Z]{1,}?[0-9]{1,}?(@)$";
+        const string Email = "^[a-zA-Z]+[@][a-zA-Z]+[.][a-z]{2,3}([.][a-z]{2}+[.][a-z]){2}{0,1}$"; 
         public void Test(string input)
         {
-            if (Regex.IsMatch(input, Password))
-                Console.WriteLine("Password  matches");
+            if (Regex.IsMatch(input, Email))
+                Console.WriteLine("Email  matches");
             else
-                Console.WriteLine("Password regex failed");
+                Console.WriteLine("Email regex failed");
         }
     }
 }
