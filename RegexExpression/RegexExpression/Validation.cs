@@ -10,7 +10,7 @@ namespace RegexExpression
     public class Validation
     {
         const string Name = "^[a-zA-Z]{3,}";
-        const string Email = "^[a-zA-Z]+[.+-_]{0,1}[a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}";
+        const string Email = "^[a-zA-Z0-9]+[.+-_]{0,1}[a-zA-Z0-9]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}";
         const string Password = "^[a-z]{8,}([0-9A-Z]{1,})+[.]$";
         public void TestName(string input)
         {
