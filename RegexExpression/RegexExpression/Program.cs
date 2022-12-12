@@ -13,17 +13,17 @@
                 case 1:
                     Console.WriteLine("enter the first name");//"Snehal"
                     string firstName = Console.ReadLine();
-                    Code.TestName(firstName);
+                    Console.WriteLine(Code.TestName(firstName)); 
                     Console.WriteLine("--------------");
                     Console.WriteLine("enter the last name");//"Bansod"
                     string lastName = Console.ReadLine();
-                    Code.TestName(lastName);
+                    Console.WriteLine(Code.TestName(lastName));
                     break;
 
                     case 2:
                     Console.WriteLine("enter the Email");//"abc@xyzhg.com";
-                    string Email = Console.ReadLine(); 
-                    Code.TestEmail(Email);
+                    string Email = Console.ReadLine();
+                    Console.WriteLine(Code.TestEmail(Email)); 
                     /*1. abc@yahoo.com, -valid
                    • 2. abc-100@yahoo.com,
                    • 3. abc.100@yahoo.com
@@ -38,7 +38,10 @@
                 case 3:
                     Console.WriteLine("Enter the password");//"snehalnaeD4."
                     string passWord = Console.ReadLine();
-                    Code.TestPassword(passWord);
+                    Console.WriteLine(Code.TestPassword(passWord)); 
+                    break;
+                case 4:
+                    Console.WriteLine(Code.TestMobile("915335335353")); 
                     break;
             }
 
