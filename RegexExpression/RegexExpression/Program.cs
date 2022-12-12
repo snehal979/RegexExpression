@@ -5,7 +5,7 @@
         public static void Main(String[] args)
         {
             Console.WriteLine("regex Experssion");
-            Console.WriteLine("hint 1. name(first/last) 2.email 3.password");
+            Console.WriteLine("hint 1. name(first/last) 2.email 3.password 4.phone number 5.Lambda expression");
             Validation Code = new Validation();
             int num = Convert.ToInt32(Console.ReadLine());
             switch (num)
@@ -43,10 +43,63 @@
                 case 4:
                     Console.WriteLine(Code.TestMobile("915335335353")); 
                     break;
+                    //Uc 13 Lambda expression
+                case 5:
+                    Console.WriteLine("Lambda Expression");
+                    Console.WriteLine("hint 1. name(first/last) 2.email 3.password 4.phone number");
+                    int value = Convert.ToInt16(Console.ReadLine());
+                    switch (value)
+                    {
+                        case 1:
+                            Console.WriteLine("enter the first name");
+                            string input = Console.ReadLine();
+                            bool result= Code.ValidationFirstName(input);
+                            Result(result); 
+                            break;
+                        case 2:
+                            Console.WriteLine("enter the last name");
+                            string lastname = Console.ReadLine();
+                            bool result1 = Code.ValidationLasttName(lastname);
+                            Result(result1);
+                            break;
+                               case 3:
+                            Console.WriteLine("enter the Email");
+                            string email = Console.ReadLine();
+                            bool result2 = Code.ValidationEmail(email);
+                            Result(result2);
+                            break;
+                        case 4:
+                            Console.WriteLine("Enter the password");
+                            string Password = Console.ReadLine();
+                            bool result3 = Code.ValidationPassword(Password);
+                            Result(result3);
+                            break;
+                        case 5:
+                            Console.WriteLine("enter the phone number");
+                            string mobile = Console.ReadLine();
+                            bool result4 = Code.ValidationMobile(mobile);
+                            Result(result4);
+                            break;
+
+                    }
+
+                    break;
             }
 
 
             Console.ReadLine();
+        }
+        public static void Result(bool results)
+        {
+            
+            if(results == true)
+            {
+                Console.WriteLine("Validation succusesfully");
+            }
+            else
+            {
+                Console.WriteLine("Invalid ");
+            }
         }
     }
    
