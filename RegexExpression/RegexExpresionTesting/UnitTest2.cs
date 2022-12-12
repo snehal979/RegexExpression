@@ -1,4 +1,5 @@
-﻿using RegexExpression;
+﻿using Microsoft.VisualStudio.TestPlatform.Utilities;
+using RegexExpression;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,22 +12,83 @@ namespace RegexExpresionTesting
     public class UnitTest2
     {
         /// <summary>
-        /// Validation of Email Parametrizun
+        /// rEFACTOR AND CHECK INVALID DATA UC12
         /// </summary>
         [TestMethod]
-        
-        
+        public void CheckGiven_FirstName_Validation_usingParamerterisum()
+        {
+            try
+            {
+                RefactorData FirstRefactor = new RefactorData(string.Empty);
+
+                string output = FirstRefactor.TestName_Refactor();
+            } catch(ExceptionRegularRegistration ex)
+            {
+                Assert.AreEqual("Name is empty", ex.Message);
+            }
+           
+           
+        }
+        /// <summary>
+        //moblie Uc12 
+        /// </summary>
+        [TestMethod]
+        public void CheckGiven_MobileNumber_Validation_usingParamerterisum()
+        {
+            try
+            {
+                RefactorData MobileRefactor = new RefactorData(string.Empty);
+
+                string output = MobileRefactor.TestMobile_Refactor();
+            }
+            catch (ExceptionRegularRegistration ex)
+            {
+                Assert.AreEqual("Phone number is empty", ex.Message);
+            }
+
+
+        }
+        /// <summary>
+        //Email Uc12 
+        /// </summary>
+        [TestMethod]
         public void CheckGiven_Email_Validation_usingParamerterisum()
         {
-            string input = "abc@xyzhg.com";
-            EmailRefactor emailRefactor = new EmailRefactor(input);
+            try
+            {
+                RefactorData EmailRefactor = new RefactorData(string.Empty);
 
-            string output = emailRefactor.TestEmail_Refector();
-            Assert.AreEqual("Email  matches", output);
+                string output = EmailRefactor.TestEmail_Refector();
+            }
+            catch (ExceptionRegularRegistration ex)
+            {
+                Assert.AreEqual("Email is empty", ex.Message);
+            }
+
+
+        }
+        /// <summary>
+        //Email Uc12 
+        /// </summary>
+        [TestMethod]
+        public void CheckGiven_Password_Validation_usingParamerterisum()
+        {
+            try
+            {
+                RefactorData passwordRefactor = new RefactorData(string.Empty);
+
+                string output = passwordRefactor.TestPassword_Refactor();
+            }
+            catch (ExceptionRegularRegistration ex)
+            {
+                Assert.AreEqual("Password is empty", ex.Message);
+            }
+
+
         }
 
-       
-        
+
+
 
     }
 }
